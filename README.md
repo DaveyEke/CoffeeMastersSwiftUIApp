@@ -69,12 +69,6 @@ How it works:
 - `JSONDecoder` decodes the payload into `[Category]`.
 - The result is assigned to the `@Published` `menu` property on the main actor so SwiftUI updates the UI automatically.
 
-Notes and ideas for extension:
-
-- Add `.validate()` to surface HTTP errors, and handle failures in the response closure.
-- Consider modeling errors and loading states to improve UX (e.g., progress indicators, retry).
-- You can extract the network layer if needed, but for this project the inline use keeps things simple.
-
 ## Requirements
 
 - macOS with the latest stable Xcode (Xcode 15+ recommended)
