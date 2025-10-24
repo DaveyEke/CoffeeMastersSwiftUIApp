@@ -22,9 +22,58 @@ This repository documents what I learned and how to run the app locally.
 - SwiftUI concepts: views, modifiers, state (`@State`, `@EnvironmentObject`), reactive updates, and composition
 - Project organization and iterative development (build → run → refine)
 - Bridging UIKit with SwiftUI using `UIViewRepresentable` to embed a WebView on the Info page
-- Using external libraries with Swift Package Manager (SPM): adding Alamofire (5.10.2) and importing it to perform simple network requests
+- Using external libraries with Swift Package Manager (SPM): added Alamofire (5.10.2) and imported it to perform simple network requests
 - Networking with Alamofire: fetching JSON via `AF.request`, decoding with `JSONDecoder`, and updating `@Published` state on the main actor (see `CoffeeMasters/Model/MenuManager.swift`)
-- Debugging a SwiftUI threading warning: fixed “Publishing changes from background threads is not allowed” by ensuring assignments to `@Published` properties occur on the main actor (e.g., `Task { @MainActor in ... }`). I wrote about the fix here: [My X post on the debugging process](https://x.com/REPLACE_WITH_YOUR_POST_URL)
+- Debugging a SwiftUI threading warning: fixed “Publishing changes from background threads is not allowed” by ensuring assignments to `@Published` properties occur on the main actor (e.g., `Task { @MainActor in ... }`). I shared a quick write-up here: [My X post on the debugging process](https://twitter.com/1804davey/status/1980522212626214934)
+
+## Networking with Alamofire
+
+This project uses [Alamofire](https://github.com/Alamofire/Alamofire) for simple URL fetching of the menu JSON and updating the UI with the decoded data.
+
+- Dependency: Added via Swift Package Manager (Alamofire 5.10.2).
+- Endpoint: `https://firtman.github.io/coffeemasters/api/menu.json`
+- Implementation location: `CoffeeMasters/Model/MenuManager.swift`
+
+Key code:
+
+```swift
+import Alamofire
+
+class MenuManager: ObservableObject {
+    @Published var menu: [Category] = []
+    
+    init() {
+        refreshItemsFromNetwork()
+    }
+    
+    func refreshItemsFromNetwork() {
+        AF.request("https://firtman.github.io/coffeemasters/api/menu.json")
+            .responseData { response in
+                if let data = response.value {
+                    let decoder = JSONDecoder()
+                    if let menuFromNetwork = try? decoder.decode([Category].self, from: data) {
+                        Task { @MainActor in
+                            self.menu = menuFromNetwork
+                        }
+                    }
+                }
+            }
+    }
+}
+```
+
+How it works:
+
+- `AF.request` performs a GET request to the menu API.
+- The `.responseData` handler receives the raw `Data`.
+- `JSONDecoder` decodes the payload into `[Category]`.
+- The result is assigned to the `@Published` `menu` property on the main actor so SwiftUI updates the UI automatically.
+
+Notes and ideas for extension:
+
+- Add `.validate()` to surface HTTP errors, and handle failures in the response closure.
+- Consider modeling errors and loading states to improve UX (e.g., progress indicators, retry).
+- You can extract the network layer if needed, but for this project the inline use keeps things simple.
 
 ## Requirements
 
