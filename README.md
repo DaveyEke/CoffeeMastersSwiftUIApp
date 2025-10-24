@@ -75,11 +75,11 @@ Note: The exact structure may vary depending on your course checkpoints and extr
 
 - Images live under `docs/images/`.
 
-![Home](docs/images/home)
-![Details](docs/images/details)
-![Cart](docs/images/cart)
-![Alert](docs/images/alert)
-![Info WebView](docs/images/infowebview)
+![Home](docs/images/home.png)
+![Details](docs/images/details.png)
+![Cart](docs/images/cart.png)
+![Alert](docs/images/alert.png)
+![Info WebView](docs/images/infowebview,png)
 
 ## Roadmap / ideas
 
