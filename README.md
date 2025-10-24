@@ -1,6 +1,6 @@
 # SwiftUI Course Project
 
-A SwiftUI app built while taking the [Introduction to iOS App Development and Swift](https://frontendmasters.com/courses/swift-ios/) course taught by Maximiliano Firtman on Frontend Masters. After completing the core exercises, I added a few enhancements:
+A SwiftUI app built while taking the [Introduction to iOS App Development and Swift](https://frontendmasters.com/courses/swift-ios/) course taught by Maximiliano Firtman on Frontend Masters. After [...]
 - A Likes feature to favorite items
 - A Filters section to quickly narrow results
 - An Alert to confirm or inform about important actions
@@ -22,6 +22,9 @@ This repository documents what I learned and how to run the app locally.
 - SwiftUI concepts: views, modifiers, state (`@State`, `@EnvironmentObject`), reactive updates, and composition
 - Project organization and iterative development (build → run → refine)
 - Bridging UIKit with SwiftUI using `UIViewRepresentable` to embed a WebView on the Info page
+- Using external libraries with Swift Package Manager (SPM): adding Alamofire (5.10.2) and importing it to perform simple network requests
+- Networking with Alamofire: fetching JSON via `AF.request`, decoding with `JSONDecoder`, and updating `@Published` state on the main actor (see `CoffeeMasters/Model/MenuManager.swift`)
+- Debugging a SwiftUI threading warning: fixed “Publishing changes from background threads is not allowed” by ensuring assignments to `@Published` properties occur on the main actor (e.g., `Task { @MainActor in ... }`). I wrote about the fix here: [My X post on the debugging process](https://x.com/REPLACE_WITH_YOUR_POST_URL)
 
 ## Requirements
 
