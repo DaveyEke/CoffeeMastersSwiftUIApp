@@ -76,24 +76,16 @@ Add images to the `docs/images` folder (create it if it doesn’t exist), then l
 
 ```md
 ![Home](docs/images/home.png)
-![Details](docs/images/details.png)
-![Filters](docs/images/filters.png)
-![Likes](docs/images/likes.png)
-![Alert](docs/images/alert.png)
+![Demo Video](docs/images/app.mov)
+
 ```
 
-If you prefer hosting images elsewhere, paste the external links:
 
-```md
-![Home](https://your.cdn.example/home.png)
-```
 
 ## Roadmap / ideas
 
-- Persist Likes across app launches (e.g., UserDefaults, or a database)
-- More advanced filtering (multiple criteria, search, tokens)
-- Accessibility enhancements (VoiceOver labels, Dynamic Type)
-- Theming and custom styles
+- More iOS 26 designs
+- Link Previews, Context Menus
 - Basic unit/UI tests
 
 ## Acknowledgments
@@ -104,4 +96,4 @@ If you prefer hosting images elsewhere, paste the external links:
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License.
