@@ -1,6 +1,6 @@
 # SwiftUI Course Project
 
-A SwiftUI app built while taking the [Introduction to iOS App Development and Swift](https://frontendmasters.com/courses/ios-swift/) course taught by Maximiliano Firtman on Frontend Masters. After completing the core exercises, I added a few enhancements:
+A SwiftUI app built while taking the [Introduction to iOS App Development and Swift](https://frontendmasters.com/courses/swift-ios/) course taught by Maximiliano Firtman on Frontend Masters. After completing the core exercises, I added a few enhancements:
 - A Likes feature to favorite items
 - A Filters section to quickly narrow results
 - An Alert to confirm or inform about important actions
@@ -89,7 +89,7 @@ Note: The exact structure may vary depending on your course checkpoints and extr
 
 ## Acknowledgments
 
-- Course: [Introduction to iOS App Development and Swift](https://frontendmasters.com/courses/ios-swift/) by Maximiliano Firtman
+- Course: [Introduction to iOS App Development and Swift](https://frontendmasters.com/courses/swift-ios/) by Maximiliano Firtman
 - Platform: Frontend Masters
 - Apple Developer Documentation for Swift and SwiftUI
 
