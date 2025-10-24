@@ -1,6 +1,6 @@
 # SwiftUI Course Project
 
-A SwiftUI app built while taking the [Introduction to iOS App Development and Swift](https://frontendmasters.com/courses/ios-swift/) course taught by Maximiliano Firtman on Frontend Masters. After completing the course’s core project, I went further by adding:
+A SwiftUI app built while taking the [Introduction to iOS App Development and Swift](https://frontendmasters.com/courses/ios-swift/) course taught by Maximiliano Firtman on Frontend Masters. After completing the core exercises, I added a few enhancements:
 - A Likes feature to favorite items
 - A Filters section to quickly narrow results
 - An Alert to confirm or inform about important actions
@@ -21,6 +21,7 @@ This repository documents what I learned and how to run the app locally.
 - Swift basics: optionals, structs, properties, functions, and simple data models
 - SwiftUI concepts: views, modifiers, state (`@State`, `@EnvironmentObject`), reactive updates, and composition
 - Project organization and iterative development (build → run → refine)
+- Bridging UIKit with SwiftUI using `UIViewRepresentable` to embed a WebView on the Info page
 
 ## Requirements
 
@@ -72,15 +73,12 @@ Note: The exact structure may vary depending on your course checkpoints and extr
 
 ## Screenshots and images
 
-Add images to the `docs/images` folder (create it if it doesn’t exist), then link to them here:
+- Images live under `docs/images/`.
 
-```md
-![Home](docs/images/home.png)
-![Demo Video](docs/images/app.mov)
-
-```
-
-
+![Home](docs/images/home)
+![Details](docs/images/details)
+![Cart](docs/images/cart)
+![Info WebView](docs/images/infowebview)
 
 ## Roadmap / ideas
 
