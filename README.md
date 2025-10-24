@@ -90,7 +90,7 @@ If you prefer hosting images elsewhere, paste the external links:
 
 ## Roadmap / ideas
 
-- Persist Likes across app launches (e.g., `@AppStorage`, UserDefaults, or a database)
+- Persist Likes across app launches (e.g., UserDefaults, or a database)
 - More advanced filtering (multiple criteria, search, tokens)
 - Accessibility enhancements (VoiceOver labels, Dynamic Type)
 - Theming and custom styles
