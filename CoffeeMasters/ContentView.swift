@@ -8,17 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var cartManager: CartManager
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            MenuPage()
+                .tabItem {
+                    Image(systemName: "cup.and.saucer")
+                    Text("Menu")
+                }
+            OffersPage()
+                .tabItem {
+                    Image(systemName: "tag")
+                    Text("Offers")
+                }
+            OrderPage()
+                .tabItem {
+                    Image(systemName: "cart")
+                    Text("My Order")
+                }
+                .badge(cartManager.cart.count)
+            InfoPage()
+                .tabItem {
+                    Image(systemName: "info.circle")
+                    Text("Info")
+                }
         }
-        .padding()
     }
 }
 
+
 #Preview {
     ContentView()
+        .environmentObject(MenuManager())
+        .environmentObject(CartManager())
+        .environmentObject(LikesManager())
 }

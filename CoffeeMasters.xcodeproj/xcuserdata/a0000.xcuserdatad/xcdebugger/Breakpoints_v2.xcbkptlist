@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EA97FF17-BA1C-4C63-9C3F-B5B38EF766C0"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7CA7A7A0-2300-408D-A72E-0F2E4D8AEF90"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../var/folders/f0/nj0hhw8s2wnb_kmnn4tdgd880000gn/T/swift-generated-sources/@__swiftmacro_13CoffeeMasters0022ContentViewswift_tiAIefMX46_0_33_1FBC67819FA5ADCC10E4843D9E8A0AEDLl7PreviewfMf_.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1"
+            landmarkName = "$s13CoffeeMasters0022ContentViewswift_tiAIefMX46_0_33_1FBC67819FA5ADCC10E4843D9E8A0AEDLl7PreviewfMf_15PreviewRegistryfMu_"
+            landmarkType = "37">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
