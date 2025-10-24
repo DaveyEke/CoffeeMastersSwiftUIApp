@@ -78,6 +78,7 @@ Note: The exact structure may vary depending on your course checkpoints and extr
 ![Home](docs/images/home)
 ![Details](docs/images/details)
 ![Cart](docs/images/cart)
+![Alert](docs/images/alert)
 ![Info WebView](docs/images/infowebview)
 
 ## Roadmap / ideas
